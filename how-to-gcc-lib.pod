@@ -1,0 +1,81 @@
+=encoding utf8
+
+=head1 gcc编译静态和动态库简易教程
+
+=head2 编写示例程序
+
+hello.h代码：
+
+    #ifndef HELLO_H
+    #define HELLO_H
+
+    void hello(const char* xxx);
+
+    #endif // HELLO_H
+
+hello.c代码：
+
+    #include <stdio.h>
+
+    void hello(const char* name) {
+            printf("hello %s!\n", name);
+    }
+
+hello.c将是我们需要编译的库源码文件，业务使用hello时引入hello.h文件，下面是业务main.c代码：
+
+    #include "hello.h"
+
+    int main() {
+            hello("man");
+                return 0;
+    }
+
+=head2 将hello.c编译为.o文件
+
+无论静态库，还是动态库，都是由.o文件创建的。所以需要将源程序hello.c通过gcc先编译为.o文件：
+    
+    gcc -c hello.c
+
+=head2 由.o文件创建静态库
+
+静态库文件名的命名规范是：lib+静态库名+.a。例如，我们将创建的静态库名为ihello，则静态库文件名就是libihello.a。在创建和使用静态库时，需要注意这点。创建静态库用ar命令：
+
+    ar crv libihello.a hello.a
+
+=head2 在程序中使用静态库
+
+如何使用静态库？只需要在源程序中包含这些公用函数的声明，然后再告诉gcc编译的时候需要使用的静态库名，gcc就会从静态库中将公用函数连接到目标文件中。
+
+注意：gcc会在静态库名前加上前缀lib和后缀.a得到静态库文件。
+
+    gcc -o hello main.c -L. -lihello
+
+=head2 运行试试
+
+    ./hello
+
+=head2 由.o文件创建动态库文件
+
+动态库文件命名规范和静态库类似，只不过后缀为so，如下：
+
+    gcc -shared -fPCI -o libihello.so hello.o
+
+=head2 在程序中使用动态库
+
+和静态库完全一样：
+
+    gcc -o hello main.c -L. -lihello
+
+=head2 运行试试 
+
+在mac下成功运行，在linux，可能会遇到：
+
+    ./hello: error while loading shared libraries: libihello.so: cannot open shared object file:No
+    such file or directory
+
+这是由于找不到动态库文件libihello.so。程序在运行时，会在/etc/ld.so.conf指定的库文件目录中查找对应的库，找不到就报错了，所以需要将源程序要cp库到其中一个目录下，或者直接添加目录/sbin/ldconfig
+-v后也行。
+
+=head1 更多
+
+需要详细了解gcc的编译，请看L<gcc官网|http://gcc.gnu.org>
