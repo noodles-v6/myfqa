@@ -11,7 +11,7 @@ L<http://www.ruanyifeng.com/blog/2012/02/a_history_of_unix_directory_structure.h
 
 =begin html
 
-<p><img src="https://github.com/noodles-v6/myfqa/blob/master/images/directory-structs.jpg" /></p>
+<p><img src="https://github.com/noodles-v6/myfqa/raw/master/images/directory-structs.jpg" /></p>
 
 =end html
 
@@ -22,7 +22,7 @@ Ritchie在小型机PDP-7上发明了Unix。1971年，他们将主机升级到了
 
 =begin html
 
-<p><img src="https://github.com/noodles-v6/myfqa/blob/master/images/big-cipan.jpg" /></p>
+<p><img src="https://github.com/noodles-v6/myfqa/raw/master/images/big-cipan.jpg" /></p>
 
 =end html 
 
@@ -30,7 +30,7 @@ Ritchie在小型机PDP-7上发明了Unix。1971年，他们将主机升级到了
 
 =begin html
 
-<p><img src="https://github.com/noodles-v6/myfqa/blob/master/images/RK05.jpg" /></p>
+<p><img src="https://github.com/noodles-v6/myfqa/raw/master/images/RK05.jpg" /></p>
 
 =end html 
 
