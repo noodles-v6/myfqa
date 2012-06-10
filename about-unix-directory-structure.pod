@@ -1,0 +1,18 @@
+=encoding utf8
+
+=head1 谢谢
+
+该文源自阮一峰的博文，谢谢 !!!
+L<http://www.ruanyifeng.com/blog/2012/02/a_history_of_unix_directory_structure.html>
+
+=head1 Unix目录结构的来历
+
+疑惑Unix（Linux）目录结构的含有吗？
+
+=begin html
+
+<p><img src="./images/directory-structs.jpg" /></p>
+
+=end html
+
+
