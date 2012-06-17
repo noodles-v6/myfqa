@@ -6,6 +6,8 @@
 
 =head1 Answer
 
+下面是一个简单的编译教程
+
 =head2 编写示例程序
 
 hello.h代码：
