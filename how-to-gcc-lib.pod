@@ -1,6 +1,10 @@
 =encoding utf8
 
-=head1 gcc编译静态和动态库简易教程
+=head1 Background & Question
+
+如何gcc编译静态和动态库？
+
+=head1 Answer
 
 =head2 编写示例程序
 

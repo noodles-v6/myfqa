@@ -1,13 +1,17 @@
 =encoding utf8
 
-=head1 谢谢
+=head1 Background & Question
+
+在penSUSE上安装pgplot图形库时接触了一些Linux下c++编译动态库的一些知识，牵扯了/usr/share，/usr/include等目录，不太清楚为什么要把有些东西放在指定的目录下，于是觉得还是有必要了解下linux下的目录结构。
+
+=head1 Answer
 
 该文源自阮一峰的博文，谢谢 !!!
 L<http://www.ruanyifeng.com/blog/2012/02/a_history_of_unix_directory_structure.html>
 
-=head1 Unix目录结构的来历
+=head2 Unix目录结构的来历
 
-疑惑Unix（Linux）目录结构的含有吗？
+疑惑Unix（Linux）目录结构的含义吗？
 
 =begin html
 
@@ -44,7 +48,7 @@ Ritchie在小型机PDP-7上发明了Unix。1971年，他们将主机升级到了
     /usr/local  : 存放用户自己安装的程序。
     /opt        : 在某些系统，用于存放第三方厂商开发的程序，如Oracle，所以取名为option，意为“选装”。
 
-=head1 更多链接
+=head2 更多链接
 
 要是深入了解还是要看看这篇文章L<Unix文件系统结构标准|http://www.pathname.com/fhs/pub/fhs-2.3.html>
 
