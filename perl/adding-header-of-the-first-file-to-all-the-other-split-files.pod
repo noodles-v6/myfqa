@@ -39,7 +39,11 @@
 运行比较后发现:
 
     1. print { $outfh } $header; 并没有什么特别的, 和 print $outfh $header; 效果一样.
-       也许只是为了在某些情况下美观而已. （Perl灵活）
+       其实 { $outfh } 是独立的可执行代码块，和 do { ... } 一个一样，所以下面：
+       
+           print { $header = "====\n".$header; $outfh } $header;
+           
+        你懂得！
 
     2. 答者主要指出了问者的几个问题:
         1) open 文件最好使用3参数的格式;
