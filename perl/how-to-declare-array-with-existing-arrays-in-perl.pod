@@ -1,0 +1,26 @@
+=encoding utf8
+
+=head1 用已有数组声明一个新的数组
+
+    use v5.12;
+
+    use strict;
+    use Data::Dumper;
+
+    my @a=(1,2,3);
+    my @a2=(4,5,6);
+
+    my @b = (@a, @a2);
+    my @b2 = ([@a], [@a2]);
+
+    @a2 = ('a','b','c');
+
+    say @b;
+    say Dumper @b;
+    say Dumper @b2;
+
+结果
+
+    1. Perl从数组构造数组很方便；
+    2. 合并两个数组，实际上是copy过程，不是引用；
+    3. Dumper会把引用对象完整打印出来，用[ ... ]
