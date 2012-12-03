@@ -1,0 +1,10 @@
+=encoding utf8
+
+=head1 Question & Background
+
+在看 perl5i 的时候发现了 autobox 这个模块，对其实现原理起了兴趣，
+于是考虑总结学习。
+
+=head1 核心实现
+
+=head1 更多思考
