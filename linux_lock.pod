@@ -1,0 +1,16 @@
+=encoding utf8
+
+=head1 Linux锁机制所遇知识点小结
+
+=head2 递归锁
+
+Linux下的锁可以指定是否是循环递归锁, 通过 PTHREAD_MUTEX_RECURSIVE 指定, 如:
+
+    Mutex::Mutex()
+    {
+        pthread_mutexattr_t mutexattr;
+        pthread_mutexattr_init(&mutexattr);
+        pthread_mutexattr_settype(&mutexattr, PTHREAD_MUTEX_RECURSIVE);
+        pthread_mutex_init(&m_mutex, &mutexattr);
+        pthread_mutexattr_destroy(&mutexattr);
+    }
