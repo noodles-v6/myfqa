@@ -1,0 +1,21 @@
+=encoding utf8
+
+=head1 Oracle 的 rownum 伪字段用法
+
+http://www.cnblogs.com/mabaishui/archive/2009/10/20/1587165.html
+
+http://tenn.iteye.com/blog/99339
+
+=head2 伪列
+
+因为ROWNUM是对结果集加的一 个伪列，即先查到结果集之后再加上去的一个列 （强调：先要有结果集）。简单的说rownum是对符合条件结果的序列号。它总是从1开始排起的。所以你选出的结果不可能没有1，而有其他大于1的值。所 以您没办法期望得到下面的结果集：
+
+　　11 aaaaaaaa
+
+　　12 bbbbbbb
+
+　　13 ccccccc……
+
+=head2 取别名
+
+让给伪列取一个别名即可解决.
