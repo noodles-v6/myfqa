@@ -10,8 +10,16 @@
 ## 操作
 
 1. 根据JNI原理实现本地动态连接库;
+    
+    .java -(javac)-> .class -(javah)-> .h -(实现)-> .c
+    gcc -fPIC -I $JAVA_HOME/include -I $JAVA_HOME/include/linux -shared libXXX.so XXX.c
+
 2. 编写测试程序, 调用 System.loadLibrary 加载库;
-3. 执行
+
+    System.loadLibrary("XXX");
+    当然也可以直接把load过程写入生成.h的java类中.
+    
+3. 测试
 
 ## 错误日志
 
