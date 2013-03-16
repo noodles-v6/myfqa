@@ -39,4 +39,4 @@
 
     java version "1.6.0_12"
     Java(TM) SE Runtime Environment (build 1.6.0_12-b04)
-    Java HotSpot(TM) ** 64-Bit ** Server VM (build 11.2-b01, mixed mode)
+    Java HotSpot(TM) **64-Bit** Server VM (build 11.2-b01, mixed mode)
