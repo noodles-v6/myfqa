@@ -25,3 +25,4 @@ Base64是一种把二进制数据用可见字符表示出来的表示方法. 既
 
 * [8-bit clean](http://en.wikipedia.org/wiki/8-bit_clean)
 
+* [一个漫画](http://blog.xiqiao.info/wp-content/uploads/2013/01/historical_tragedy.gif)
