@@ -17,6 +17,8 @@ Base64是一种把二进制数据用可见字符表示出来的表示方法. 既
 很相关的文章
 ============
 
+* [计算机编码](https://zh.wikipedia.org/wiki/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BC%96%E7%A0%81)
+
 * [Binary to text encoding](http://en.wikipedia.org/wiki/8-bit_clean)
 
 * [Binary file](http://en.wikipedia.org/wiki/Binary_file)
